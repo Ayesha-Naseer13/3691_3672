@@ -27,11 +27,14 @@ public class Calculator {
     }
 
     public void designUI(JPanel panel, JButton button) {
-        // Change button color to green (Member 1's design)
-        button.setBackground(Color.GREEN);
-
-        // Set font size for buttons (Member 1's design)
-        button.setFont(new Font("Arial", Font.PLAIN, 16));
+    	// Rearrange buttons to a new layout
+        panel.setLayout(new GridLayout(2, 2));
+        
+        // Add a new label and input field
+        JLabel label = new JLabel("Enter Value:");
+        JTextField inputField = new JTextField();
+        panel.add(label);
+        panel.add(inputField);
     }
 }
 
